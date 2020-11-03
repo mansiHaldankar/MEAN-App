@@ -1,0 +1,12 @@
+.post-list-sec,
+.post-list-items {
+    display: block;
+    margin-top: 20px;
+}
+
+.post-not-found {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
