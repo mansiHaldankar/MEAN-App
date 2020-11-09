@@ -1,1 +1,13 @@
-<mat-toolbar color="primary">MyMesages</mat-toolbar>
+<mat-toolbar color="primary">
+    <span class="header">
+      <a routerLink='/'>MEAN Post App</a>
+    </span>
+    <span class="spacer"></span>
+    <ul class="toolbar-list">
+        <li>
+            <a class="toolbar-list-link" mat-button routerLink='/create' routerLinkActive="mat-accent">
+              New Post
+            </a>
+        </li>
+    </ul>
+</mat-toolbar>

@@ -10,3 +10,7 @@
     text-align: center;
     margin-top: 20px;
 }
+
+.mat-spinner {
+    margin: auto;
+}
