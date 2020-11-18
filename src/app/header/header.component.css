@@ -2,6 +2,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
 .spacer {
@@ -11,8 +12,4 @@
 .header a {
     text-decoration: none;
     color: #ffffff;
-}
-
-.mat-accent {
-    color: #ff4081
 }

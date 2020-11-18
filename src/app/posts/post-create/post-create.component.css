@@ -1,13 +1,13 @@
-.create-post-textarea {
-    width: 80%;
+mat-form-field,
+textarea {
+    width: 100%;
+}
+
+mat-spinner {
     margin: auto;
 }
 
-.mat-spinner {
-    margin: auto;
-}
-
-.file-upload-input {
+input[type="file"] {
     visibility: hidden;
 }
 

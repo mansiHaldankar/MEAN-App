@@ -6,6 +6,7 @@ const cors = require('cors');
 const app = express();
 
 const postRoutes = require('./routers/posts');
+const userRoutes = require('./routers/users');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -26,7 +27,8 @@ app.use(cors());
 //     next();
 // });
 
-mongoose.connect("mongodb+srv://admin:admin@mean-app.xgsw9.mongodb.net/MEAN-App", { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.set('useCreateIndex', true);
+mongoose.connect("mongodb+srv://admin:" + process.env.MONGO_DB_PW + "@mean-app.xgsw9.mongodb.net/MEAN-App", { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("Connected to Database");
     })
@@ -34,6 +36,7 @@ mongoose.connect("mongodb+srv://admin:admin@mean-app.xgsw9.mongodb.net/MEAN-App"
         console.log("Conncetion Failed");
     });
 
-app.use("/api/posts", postRoutes)
+app.use("/api/posts", postRoutes);
+app.use("/api/users", userRoutes);
 
 module.exports = app;
